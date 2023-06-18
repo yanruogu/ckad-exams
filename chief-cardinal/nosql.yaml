@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nosql
+  name: nosql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nosql
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nosql
+    spec:
+      containers:
+      - image: nginx:1.21
+        name: nginx
+        resources:
+          limits: 
+            memory: 2000Mi
+          requests:
+            memory: 2000Mi

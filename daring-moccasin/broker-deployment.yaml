@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: broker-deployment
+  name: broker-deployment
+  namespace: quetzal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: broker-deployment
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: broker-deployment
+    spec:
+      containers:
+      - image: busybox:1.35
+        name: busybox
+        resources: {}
+        command:
+        - sh
+        - -c
+        - "sleep 1h"

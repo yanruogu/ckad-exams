@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: db
+  name: db
+  namespace: ckad00018
+spec:
+  containers:
+  - image: mysql:8.0
+    name: db
+    env: 
+    - name: MYSQL_ROOT_PASSWORD
+      value: ckad666
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always

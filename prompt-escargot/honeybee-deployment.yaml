@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: honeybee-deployment
+  name: honeybee-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: honeybee-deployment
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: honeybee-deployment
+    spec:
+      containers:
+      - image: kubectl:1.26
+        name: kubectl
+        resources: {}
+        command: 
+        - /bin/sh
+        - -c
+        - "echo "

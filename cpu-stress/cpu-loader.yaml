@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: cpu-loader
+  name: cpu-loader
+  namespace: cpu-stress
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cpu-loader
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: cpu-loader
+    spec:
+      containers:
+      - image: busybox:1.35
+        name: busybox
+        command:
+        - /bin/sh
+        - -c
+        - "sleep 1d"
+        resources: {}

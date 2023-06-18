@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: current-chipmunk-deployment
+  name: current-chipmunk-deployment
+  namespace: goshawk
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: chipmunk-service
+      run: current-chipmunk-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: chipmunk-service
+        run: current-chipmunk-deployment
+    spec:
+      containers:
+      - image: nginx:1.21
+        name: nginx
+        resources: {}

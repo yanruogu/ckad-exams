@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: chipmunk-service
+  name: chipmunk-service
+  namespace: goshawk
+spec:
+  ports:
+  - name: 80-80
+    port: 80
+    protocol: TCP
+    targetPort: 80
+    nodePort: 30119
+  selector:
+    app: chipmunk-service
+  type: NodePort

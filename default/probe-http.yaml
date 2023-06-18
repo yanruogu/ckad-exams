@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: probe-http
+  name: probe-http
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: probe-http
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: probe-http
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: ckad00017-deployment
+  name: ckad00017-deployment
+  namespace: ckad00017
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ckad00017-deployment
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: ckad00017-deployment
+    spec:
+      containers:
+      - image: nginx:1.23.1
+        name: nginx
+        resources: {}
+        ports:
+        - name: http
+          containerPort: 80

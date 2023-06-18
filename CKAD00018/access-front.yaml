@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: access-front
+  namespace: ckad00018
+spec:
+  podSelector:
+    matchLabels:
+      app: front
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          front-access: "true"
+  egress:
+  - to:
+    - podSelector:
+        matchLabels:
+          front-access: "true"

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: deploy-ck8s
+  name: deploy-ck8s
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deploy-ck8s
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: deploy-ck8s
+    spec:
+      containers:
+      - image: ngnix
+        name: nginx
+        resources: {}
