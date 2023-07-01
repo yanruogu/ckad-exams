@@ -27,7 +27,7 @@ kubectl apply -f ${baseDir}/daring-moccasin/broker-deployment.yaml
 # 07
 kubectl create ns ckad00014
 
-# 08 todo
+# 08 done
 kubectl create ns gorilla
 kubectl apply -f ${baseDir}/prompt-escargot/honeybee-deployment.yaml
 
@@ -63,7 +63,12 @@ kubectl apply -f ${baseDir}/CKAD00018/ckad00018-newpod.yaml
 kubectl apply -f ${baseDir}/CKAD00018/db.yaml
 kubectl apply -f ${baseDir}/CKAD00018/front.yaml
 
-# 17 todo
+# 17 done
+
+kubectl apply -f ${baseDir}/ambassador/nginx-svc.yaml
+kubectl apply -f ${baseDir}/ambassador/poller.yaml
+
+
 
 # 18 
 kubectl apply -f  ${baseDir}/default/deploy-ck8s.yaml

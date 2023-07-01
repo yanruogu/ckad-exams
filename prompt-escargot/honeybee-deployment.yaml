@@ -4,22 +4,17 @@ metadata:
   labels:
     app: honeybee-deployment
   name: honeybee-deployment
+  namespace: gorilla
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: honeybee-deployment
-  strategy: {}
   template:
     metadata:
       labels:
         app: honeybee-deployment
     spec:
       containers:
-      - image: kubectl:1.26
-        name: kubectl
-        resources: {}
-        command: 
-        - /bin/sh
-        - -c
-        - "echo "
+      - image: registry.cn-zhangjiakou.aliyuncs.com/breezey/honeybee:v0.3
+        name: honeybee

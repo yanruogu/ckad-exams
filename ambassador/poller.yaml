@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: poller
+  name: poller
+spec:
+  containers:
+  - image: registry.cn-zhangjiakou.aliyuncs.com/breezey/nacos-server:v2.2.3
+    name: poller
+    env:
+    - name: EMBEDDED_STORAGE
+      value: embedded
+    - name: MODE
+      value: standalone
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
