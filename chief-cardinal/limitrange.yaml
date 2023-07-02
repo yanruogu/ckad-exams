@@ -2,6 +2,7 @@ apiVersion: v1
 kind: LimitRange
 metadata:
   name: cpu-min-max-demo-lr
+  namespace: haddock
 spec:
   limits:
   - type: Container

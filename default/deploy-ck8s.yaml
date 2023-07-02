@@ -17,6 +17,6 @@ spec:
         app: deploy-ck8s
     spec:
       containers:
-      - image: ngnix
+      - image: nginx
         name: nginx
         resources: {}

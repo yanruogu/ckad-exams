@@ -1,2 +1,2 @@
-FROM centos:8.2
+FROM centos:8
 
