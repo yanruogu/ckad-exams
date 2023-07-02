@@ -78,6 +78,7 @@ kubectl apply -f  ${currentDir}/default/deploy-ck8s.yaml
 
 # 19
 kubectl create ns cpu-stress
+kubectl apply -f  ${currentDir}/cpu-stress/metrics-server-v0.6.3.yaml
 kubectl apply -f  ${currentDir}/cpu-stress/cpu-loader.yaml
 kubectl apply -f  ${currentDir}/cpu-stress/redis-test.yaml
 
