@@ -5,6 +5,7 @@ metadata:
   labels:
     app: nosql
   name: nosql
+  namespace: haddock
 spec:
   replicas: 1
   selector:

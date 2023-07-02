@@ -11,6 +11,6 @@ spec:
     default:
       memory: 140Mi
     defaultRequest: 
-      cpu: 140Mi
+      memory: 140Mi
     min:
       memory: 30Mi
