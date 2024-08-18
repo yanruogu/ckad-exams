@@ -17,7 +17,7 @@ spec:
         app: broker-deployment
     spec:
       containers:
-      - image: busybox:1.35
+      - image: hub.atomgit.com/amd64/busybox:1.35
         name: busybox
         resources: {}
         command:

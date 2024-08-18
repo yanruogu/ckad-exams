@@ -17,6 +17,6 @@ spec:
         app: deploy-ck8s
     spec:
       containers:
-      - image: ngnix
+      - image: hub.atomgit.com/amd64/ngnix
         name: nginx
         resources: {}

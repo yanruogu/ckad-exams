@@ -8,7 +8,7 @@ metadata:
   namespace: cpu-stress
 spec:
   containers:
-  - image: redis
+  - image: hub.atomgit.com/amd64/redis
     name: redis-test
     resources: {}
   dnsPolicy: ClusterFirst

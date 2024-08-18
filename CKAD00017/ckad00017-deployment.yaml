@@ -17,7 +17,7 @@ spec:
         app: ckad00017-deployment
     spec:
       containers:
-      - image: nginx:1.23.1
+      - image: hub.atomgit.com/amd64/nginx:1.25.2
         name: nginx
         resources: {}
         ports:

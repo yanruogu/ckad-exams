@@ -7,7 +7,7 @@ metadata:
   namespace: ckad00018
 spec:
   containers:
-  - image: busybox:1.35
+  - image: hub.atomgit.com/amd64/busybox:1.35
     name: ckad00018-newpod
     command:
     - /bin/sh

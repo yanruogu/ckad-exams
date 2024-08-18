@@ -16,6 +16,6 @@ spec:
         app: probe-http
     spec:
       containers:
-      - image: nginx
+      - image: hub.atomgit.com/amd64/nginx
         name: nginx
         resources: {}

@@ -1,2 +1,2 @@
-FROM centos:8
+FROM hub.atomgit.com/amd64/centos:7
 

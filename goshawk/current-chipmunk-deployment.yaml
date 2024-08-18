@@ -20,6 +20,6 @@ spec:
         run: current-chipmunk-deployment
     spec:
       containers:
-      - image: nginx:1.21
+      - image: hub.atomgit.com/amd64/nginx:1.24
         name: nginx
         resources: {}
